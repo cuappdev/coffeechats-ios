@@ -145,7 +145,7 @@ class GoalsViewController: UIViewController {
     }
 
     @objc func backButtonPressed() {
-        delegate?.backPage(index: 2)
+        delegate?.backPage(index: 3)
     }
 
     @objc func nextButtonPressed() {
@@ -155,7 +155,7 @@ class GoalsViewController: UIViewController {
                 case .value(let response):
                     DispatchQueue.main.async {
                         if response.success {
-                            self.delegate?.nextPage(index: 4)
+                            self.delegate?.nextPage(index: 5)
                         } else {
                             self.present(UIAlertController.getStandardErrortAlert(), animated: true, completion: nil)
                         }
@@ -167,7 +167,7 @@ class GoalsViewController: UIViewController {
     }
 
     @objc func skipButtonPressed() {
-        delegate?.nextPage(index: 4)
+        delegate?.nextPage(index: 5)
     }
 
     private func getUserGoals() {

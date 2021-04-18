@@ -232,7 +232,7 @@ class TalkingPointsViewController: UIViewController {
     }
 
     @objc func backButtonPressed() {
-        delegate?.backPage(index: 3)
+        delegate?.backPage(index: 4)
     }
 
     @objc func nextButtonPressed() {
@@ -243,7 +243,7 @@ class TalkingPointsViewController: UIViewController {
                 switch result {
                 case .value(let response):
                     if response.success {
-                        self.delegate?.nextPage(index: 5)
+                        self.delegate?.nextPage(index: 6)
                     } else {
                         self.present(UIAlertController.getStandardErrortAlert(), animated: true, completion: nil)
                     }
@@ -255,7 +255,7 @@ class TalkingPointsViewController: UIViewController {
     }
 
     @objc func skipButtonPressed() {
-        delegate?.nextPage(index: 5)
+        delegate?.nextPage(index: 6)
     }
 
 }
